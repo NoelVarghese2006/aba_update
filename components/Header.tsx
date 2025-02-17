@@ -1,8 +1,7 @@
 function Header() {
   return (
-    <div className="flex justify-between p-4">
-        <div className="text-2xl">ABA</div>
-        <div className="text-2xl">Contact Us</div>
+    <div className="flex p-4 bg-amber-50">
+        <div className="text-2xl">Agape Brethren Assembly</div>
     </div>
   )
 }
