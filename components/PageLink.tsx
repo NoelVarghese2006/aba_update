@@ -19,7 +19,7 @@ function PageLink({text, link, img}: PageLink) {
 
     const [rotate, setRotate] = useState(0);
     const [moveX, setMoveX] = useState(0); // Track horizontal movement
-    const [color, setColor] = useState("black"); // Track color
+    const [color, setColor] = useState("#000"); // Track color
     const [tempX, setTempX] = useState(0);
     const [currX, setCurrX] = useState(offset);
 
@@ -43,7 +43,7 @@ function PageLink({text, link, img}: PageLink) {
         setMoveX(0);  
         setCurrX(offset);
         setTimeout(() => {
-            setColor("black"); 
+            setColor("#000"); 
         }, 100);  
         setTimeout(() => {
             setRotate(0);
