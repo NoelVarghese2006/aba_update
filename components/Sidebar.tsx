@@ -36,9 +36,9 @@ function Sidebar() {
             <div className="flex flex-col items-center justify-center w-full gap-4 my-6" onClick={openSheet}>
                     <PageLink text='Home' link='/' img='House'/>
                     <PageLink text='About' link='/about' img='Church'/>
-                    <PageLink text='Meetings' link='/' img='Users'/>
-                    <PageLink text='Beliefs' link='/' img='FileBadge'/>
-                    <PageLink text='Contact' link='/' img='Mail'/>
+                    <PageLink text='Meetings' link='/meetings' img='Users'/>
+                    <PageLink text='Beliefs' link='/beliefs' img='FileBadge'/>
+                    <PageLink text='Contact' link='/contact' img='Mail'/>
             </div>
         </SheetContent>
         </Sheet>
@@ -49,8 +49,8 @@ function Sidebar() {
                     <PageLink text='Home' link='/' img='House'/>
                     <PageLink text='About' link='/about' img='Church'/>
                     <PageLink text='Meetings' link='/meetings' img='Users'/>
-                    <PageLink text='Beliefs' link='/' img='FileBadge'/>
-                    <PageLink text='Contact' link='/' img='Mail'/>
+                    <PageLink text='Beliefs' link='/beliefs' img='FileBadge'/>
+                    <PageLink text='Contact' link='/contact' img='Mail'/>
             </div>
     </div>
     </>
