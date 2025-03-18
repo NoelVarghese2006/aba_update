@@ -153,8 +153,34 @@ function Beliefs() {
           </HoverCardContent>
         </HoverCard>
       </div>
-      <div className="my-4">That the Lord Jesus Christ has commissioned His Church to proclaim the Gospel to all people and make disciples of all nations. (Matthew 28:18-20)</div>
-      <div>That the Church will be raptured, followed by the Great Tribulation and Christ’s return to the earth to establish His Millennial Kingdom. (Matthew 24:15-30, 1 Thessalonians 4:16-17, Revelation 20:4-6)</div>
+      <div className="my-4">That the Lord Jesus Christ has commissioned His Church to proclaim the Gospel to all people and make disciples of all nations. 
+      <HoverCard>
+          <HoverCardTrigger> (Matthew 28:18-20)</HoverCardTrigger>
+          <HoverCardContent>
+            'And Jesus came and spoke to them, saying, “All authority has been given to Me in heaven and on earth. Go therefore and make disciples of all the nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all things that I have commanded you; and lo, I am with you always, even to the end of the age.” Amen.' (NKJV)
+          </HoverCardContent>
+        </HoverCard>  
+      </div>
+      <div>That the Church will be raptured, followed by the Great Tribulation and Christ’s return to the earth to establish His Millennial Kingdom. 
+        <HoverCard>
+          <HoverCardTrigger> (Matthew 24:15-30, </HoverCardTrigger>
+          <HoverCardContent>
+            Due to the length of the passage, please read this passage on your own.
+          </HoverCardContent>
+        </HoverCard>
+        <HoverCard>
+          <HoverCardTrigger>1 Thessalonians 4:16-17, </HoverCardTrigger>
+          <HoverCardContent>
+            'For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first. 17 Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.' (NKJV)
+          </HoverCardContent>
+        </HoverCard>
+        <HoverCard>
+          <HoverCardTrigger>Revelation 20:4-6)</HoverCardTrigger>
+          <HoverCardContent>
+            'And I saw thrones, and they sat on them, and judgment was committed to them. Then I saw the souls of those who had been beheaded for their witness to Jesus and for the word of God, who had not worshiped the beast or his image, and had not received his mark on their foreheads or on their hands. And they lived and reigned with Christ for a thousand years. But the rest of the dead did not live again until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over such the second death has no power, but they shall be priests of God and of Christ, and shall reign with Him a thousand years.' (NKJV)
+          </HoverCardContent>
+        </HoverCard>
+        </div>
     </div>
   )
 }
