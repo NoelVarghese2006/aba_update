@@ -71,7 +71,7 @@ const Calendar: React.FC<CalendarProps> = ({
     splitSaturdays(upcomingSaturdays);
     setSundays(upcomingSundays);
     setWed(upcomingWednesdays);
-  }, [generateWeekDays]);
+  }, []);
 
   return (
       <DayPicker
