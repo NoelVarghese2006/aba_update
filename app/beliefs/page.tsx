@@ -10,6 +10,8 @@ import {
 
 function Beliefs() {
   return (
+    <div className="flex flex-col">
+    <h1 className="flex justify-center text-2xl">We Believe: </h1>
     <div className="p-4">
       <div>That the Bible is the inspired Word of God and is the final authority for all matters of faith, life, and conduct.  
         <HoverCard>
@@ -181,6 +183,7 @@ function Beliefs() {
           </HoverCardContent>
         </HoverCard>
         </div>
+    </div>
     </div>
   )
 }

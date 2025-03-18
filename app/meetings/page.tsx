@@ -29,12 +29,14 @@ function Meetings()
       };
 
     return(
-        <div className="h-full w-full md:flex">
+        <div className="flex flex-col justify-center w-full border-red-800">
+        <h1 className="flex justify-center text-2xl">Meeting Schedule</h1>
+        <div className="h-full w-full md:grid grid-cols-2 px-[10vw]">
             <Calendar 
                 mode="single"
                 selected={date}
                 onSelect={setDate}
-                className="rounded-md border w-[275px]"
+                className="rounded-md w-[275px]"
                 sendData={handleCalendarData}
             />
             <AnimatePresence>
@@ -50,11 +52,13 @@ function Meetings()
                         <CardTitle className="flex justify-center">Sunday</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col justify-center items-center">
-                        <div>10:00am - 11:45am</div>
-                        <div>Breaking of Bread & Word Ministry</div>
-                        <div>11:45am - 12:15pm</div>
+                        <div>10:00am - 11:00am</div>
+                        <div>Breaking of Bread</div>
+                        <div>11:00am - 12:00pm</div>
+                        <div>Word Ministry</div>
+                        <div>12:00pm - 12:45pm</div>
                         <div>Fellowship & Snacks</div>
-                        <div>12:15pm - 1:15pm</div>
+                        <div>12:45pm - 1:30pm</div>
                         <div>Sunday School & Bible Study</div>
                     </CardContent>
                 </Card>
@@ -123,19 +127,13 @@ function Meetings()
                 className="w-[275px] md:w-96"> 
                 <Card>
                     <CardHeader>
-                        <CardTitle>Hover Over a Day</CardTitle>
-                        <CardDescription>Card Description</CardDescription>
+                        <CardTitle>Hover Over/Click a Day</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                        <p>Card Content</p>
-                    </CardContent>
-                    <CardFooter>
-                        <p>Card Footer</p>
-                    </CardFooter>
                 </Card>
                 </motion.div>
             }
             </AnimatePresence>
+        </div>
         </div>
     )
 }
