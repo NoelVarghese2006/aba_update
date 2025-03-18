@@ -7,16 +7,6 @@ import { DayPicker, DayPickerProps } from "react-day-picker"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
-
 export type CalendarProps = DayPickerProps & {
   sendData: (data: string) => void;  // Add sendData prop
 };
@@ -38,6 +28,7 @@ const Calendar: React.FC<CalendarProps> = ({
 
   const handleClick = (day : string): void => {
     sendData(day);  // Call sendData function passed from the parent
+    console.log(currDay);
   };
     
 
@@ -52,7 +43,7 @@ const Calendar: React.FC<CalendarProps> = ({
   // Generate an array of the next N occurrences of a specific day
   const generateWeekDays = (numOfDays: number, targetDay: number): Date[] => {
     const weekDaysArray: Date[] = [];
-    let currentDay = getNextDay(new Date(), targetDay); // Start with the first occurrence of the target day
+    const currentDay = getNextDay(new Date(), targetDay); // Start with the first occurrence of the target day
     for (let i = 0; i < numOfDays; i++) {
       weekDaysArray.push(new Date(currentDay)); // Add current day to the array
       currentDay.setDate(currentDay.getDate() + 7); // Move to the next occurrence (7 days later)
@@ -80,7 +71,7 @@ const Calendar: React.FC<CalendarProps> = ({
     splitSaturdays(upcomingSaturdays);
     setSundays(upcomingSundays);
     setWed(upcomingWednesdays);
-  }, []);
+  }, [generateWeekDays]);
 
   return (
       <DayPicker

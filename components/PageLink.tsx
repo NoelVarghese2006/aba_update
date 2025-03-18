@@ -38,7 +38,7 @@ function PageLink({text, link, img}: PageLink) {
             setRotate(0);
         }, 200);      
     };
-    const endHover = (e: React.MouseEvent) => {
+    const endHover = () => {
         setRotate(-tempX);
         setMoveX(0);  
         setCurrX(offset);

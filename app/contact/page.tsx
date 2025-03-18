@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
@@ -100,7 +100,7 @@ function Contact() {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Enter your message."/>
+                      <Textarea placeholder="Enter your message." {...field}/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
