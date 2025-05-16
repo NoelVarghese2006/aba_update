@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useState } from "react";
 import { motion } from "framer-motion"
+import Cursor from
 import { Church, FileBadge, House, Mail, Users } from "lucide-react"
 
 interface PageLink {
@@ -9,6 +10,7 @@ interface PageLink {
     link: string;
     img: string;
 }
+
 
 function PageLink({text, link, img}: PageLink) {
     let offset = 126;
@@ -24,6 +26,12 @@ function PageLink({text, link, img}: PageLink) {
     const [currX, setCurrX] = useState(offset);
 
     const startHover = (e: React.MouseEvent) => {
+        if(window.innerWidth < 768) {
+            setTimeout(() => {
+                setColor("#991b1b"); 
+            }, 100); 
+            return;
+        }
         setCurrX(e.clientX)
         if(Math.abs(e.clientX - currX) < 10)
             setRotate((e.clientX-currX) * 10);
@@ -39,12 +47,13 @@ function PageLink({text, link, img}: PageLink) {
         }, 200);      
     };
     const endHover = () => {
+        setTimeout(() => {
+            setColor("#000"); 
+        }, 100); 
+        if(window.innerWidth < 768) return;
         setRotate(-tempX);
         setMoveX(0);  
         setCurrX(offset);
-        setTimeout(() => {
-            setColor("#000"); 
-        }, 100);  
         setTimeout(() => {
             setRotate(0);
         }, 200);   
