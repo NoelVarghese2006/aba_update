@@ -2,8 +2,8 @@
 import Link from "next/link"
 import { useState } from "react";
 import { motion } from "framer-motion"
-import Cursor from
 import { Church, FileBadge, House, Mail, Users } from "lucide-react"
+
 
 interface PageLink {
     text: string;
