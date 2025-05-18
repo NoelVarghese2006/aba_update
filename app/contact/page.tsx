@@ -10,6 +10,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
+import { Berkshire_Swash } from 'next/font/google'
+  
+const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
+
 const formSchema = z.object({
   name: z.string().min(2).max(50),
   email: z.string().email(),
@@ -34,7 +38,7 @@ function Contact() {
 
     return (
       <div className="flex flex-col w-screen">
-      <h1 className="flex flex-row h-fit justify-center text-2xl">Contact</h1>
+      <div className={bs.className}><h1 className="flex flex-row h-fit justify-center text-2xl">Contact</h1></div>
       <div className="flex flex-col md:flex-row justify-evenly w-full items-center">
         <div className="flex flex-col justify-evenly w-fit m-4">
           <Card className="bg-amber-200 w-full mb-4">

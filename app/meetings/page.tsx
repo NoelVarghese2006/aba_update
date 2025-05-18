@@ -12,6 +12,10 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+
+import { Berkshire_Swash } from 'next/font/google'
+  
+const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
   
 
 
@@ -28,7 +32,7 @@ function Meetings()
 
     return(
         <div className="flex flex-col justify-center w-full border-red-800">
-        <h1 className="flex justify-center text-2xl">Meeting Schedule</h1>
+        <div className={bs.className}><h1 className="flex justify-center text-2xl">Meeting Schedule</h1></div>
         <div className="h-full w-full md:grid grid-cols-2 px-[10vw]">
             <Calendar 
                 mode="single"
