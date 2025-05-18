@@ -12,6 +12,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
+import ScrollFadeCarousel from "@/components/ScrollFadeCarousel"
+
 import MediaQuery from "react-responsive"
 
 import { Berkshire_Swash } from 'next/font/google'
@@ -22,11 +24,12 @@ const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
 function Beliefs() {
   return (
-    <div className="flex flex-col">
-    <div className={bs.className}><h1 className="flex justify-center text-2xl">We Believe: </h1></div>
-    <div className="p-4">
-      <div>
-        <div className="h-screen">That the Bible is the inspired Word of God and is the final authority for all matters of faith, life, and conduct.  
+    <div className="flex flex-col overflow-y-auto overflow-x-hidden snap-y snap-mandatory max-h-[calc(100vh-74px)]">
+    
+    <div className={bs.className}><h1 className="snap-center flex justify-center items-center text-2xl h-screen">We Believe: </h1></div>
+    <div className="p-4 text-3xl">
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen">
+        <div className="realtive">That the Bible is the inspired Word of God and is the final authority for all matters of faith, life, and conduct.  
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(2 Timothy 3:16-17,</HoverCardTrigger>
@@ -78,10 +81,10 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="currentColor" d="M6 22h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4a2 2 0 0 0-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3M8 7h3V5h2v2h3v2h-3v6h-2V9H8z"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 24 24"><path fill="currentColor" d="M6 22h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4a2 2 0 0 0-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3M8 7h3V5h2v2h3v2h-3v6h-2V9H8z"></path></svg>
       </div>
-      <div>
-        <div className="my-4">That the Godhead eternally exists in three persons – the Father, the Son, and the Holy Spirit. God is our Creator, Redeemer, and Sustainer. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">That the Godhead eternally exists in three persons – the Father, the Son, and the Holy Spirit. God is our Creator, Redeemer, and Sustainer. 
           <MediaQuery minWidth={600}>
             <HoverCard>
               <HoverCardTrigger>&nbsp;(Matthew 28:19,</HoverCardTrigger>
@@ -133,10 +136,10 @@ function Beliefs() {
             </Popover>
           </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 512 512"><path fill="currentColor" d="M256 74.06c32.76 39.37 52.457 90.004 52.457 145.29c0 21.33-2.937 41.966-8.42 61.534c-28.84-5.284-58.69-5.445-88.098-.09c-5.467-19.54-8.397-40.147-8.397-61.445c0-55.286 19.698-105.92 52.457-145.29zm-.582 220.687c13.13-.026 26.197 1.1 39.057 3.313c-9.017 24.453-22.117 46.918-38.475 66.578c-16.365-19.668-29.47-42.144-38.486-66.61c12.6-2.17 25.28-3.256 37.904-3.28zM199.8 301.82c10.063 28.133 25.12 53.896 44.108 76.224c-41.252 42.28-98.866 68.52-162.68 68.52a229.3 229.3 0 0 1-38.437-3.243c17.722-48.045 51.722-90.41 99.595-118.05c18.446-10.65 37.758-18.414 57.416-23.45zm112.39.025c57.208 14.6 108.705 51.362 140.595 106.593a229.3 229.3 0 0 1 16.4 34.887a229 229 0 0 1-38.414 3.24c-63.812 0-121.426-26.242-162.678-68.52c18.98-22.322 34.037-48.076 44.1-76.2zm180.22 154.888l-5.44-17.162a246.3 246.3 0 0 0-18.597-40.132c-34.176-59.19-89.39-98.733-150.77-114.67c5.76-20.833 8.854-42.767 8.854-65.42c0-60.5-21.98-115.908-58.365-158.695L256 47.435l-12.092 13.218c-36.386 42.787-58.365 98.195-58.365 158.696c0 22.616 3.085 44.517 8.83 65.32c-20.89 5.424-41.4 13.704-60.988 25.013c-52.404 30.254-89.403 77-108.264 129.91l-5.425 17.17l17.498 3.843a246 246 0 0 0 44.036 3.96c68.387 0 130.27-28.075 174.77-73.303c44.5 45.228 106.383 73.302 174.77 73.302c15.04 0 29.76-1.364 44.056-3.963z"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 512 512"><path fill="currentColor" d="M256 74.06c32.76 39.37 52.457 90.004 52.457 145.29c0 21.33-2.937 41.966-8.42 61.534c-28.84-5.284-58.69-5.445-88.098-.09c-5.467-19.54-8.397-40.147-8.397-61.445c0-55.286 19.698-105.92 52.457-145.29zm-.582 220.687c13.13-.026 26.197 1.1 39.057 3.313c-9.017 24.453-22.117 46.918-38.475 66.578c-16.365-19.668-29.47-42.144-38.486-66.61c12.6-2.17 25.28-3.256 37.904-3.28zM199.8 301.82c10.063 28.133 25.12 53.896 44.108 76.224c-41.252 42.28-98.866 68.52-162.68 68.52a229.3 229.3 0 0 1-38.437-3.243c17.722-48.045 51.722-90.41 99.595-118.05c18.446-10.65 37.758-18.414 57.416-23.45zm112.39.025c57.208 14.6 108.705 51.362 140.595 106.593a229.3 229.3 0 0 1 16.4 34.887a229 229 0 0 1-38.414 3.24c-63.812 0-121.426-26.242-162.678-68.52c18.98-22.322 34.037-48.076 44.1-76.2zm180.22 154.888l-5.44-17.162a246.3 246.3 0 0 0-18.597-40.132c-34.176-59.19-89.39-98.733-150.77-114.67c5.76-20.833 8.854-42.767 8.854-65.42c0-60.5-21.98-115.908-58.365-158.695L256 47.435l-12.092 13.218c-36.386 42.787-58.365 98.195-58.365 158.696c0 22.616 3.085 44.517 8.83 65.32c-20.89 5.424-41.4 13.704-60.988 25.013c-52.404 30.254-89.403 77-108.264 129.91l-5.425 17.17l17.498 3.843a246 246 0 0 0 44.036 3.96c68.387 0 130.27-28.075 174.77-73.303c44.5 45.228 106.383 73.302 174.77 73.302c15.04 0 29.76-1.364 44.056-3.963z"></path></svg>
       </div>
-      <div>
-        <div className="my-4">That man was created in the image of God and fell in sin by disobedience. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">That man was created in the image of God and fell in sin by disobedience. 
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(Genesis 2:17,</HoverCardTrigger>
@@ -188,10 +191,10 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 512 512"><path fill="currentColor" d="M288 0c17.7 0 32 14.3 32 32v9.8c0 54.6-27.9 104.6-72.5 133.6l.2.3l56.8 80.3H392c15.1 0 29.3 7.1 38.4 19.2l43.2 57.6c10.6 14.1 7.7 34.2-6.4 44.8s-34.2 7.7-44.8-6.4L384 320h-97.4l92.3 142.6c9.6 14.8 5.4 34.6-9.5 44.3s-34.6 5.4-44.3-9.5L164.5 249.2c-2.9 9.2-4.5 19-4.5 29V352c0 17.7-14.3 32-32 32s-32-14.3-32-32v-73.8c0-65.1 39.6-123.7 100.1-147.9c36.2-14.5 59.9-49.5 59.9-88.5V32c0-17.7 14.3-32 32-32M112 32a48 48 0 1 1 0 96a48 48 0 1 1 0-96"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 512 512"><path fill="currentColor" d="M288 0c17.7 0 32 14.3 32 32v9.8c0 54.6-27.9 104.6-72.5 133.6l.2.3l56.8 80.3H392c15.1 0 29.3 7.1 38.4 19.2l43.2 57.6c10.6 14.1 7.7 34.2-6.4 44.8s-34.2 7.7-44.8-6.4L384 320h-97.4l92.3 142.6c9.6 14.8 5.4 34.6-9.5 44.3s-34.6 5.4-44.3-9.5L164.5 249.2c-2.9 9.2-4.5 19-4.5 29V352c0 17.7-14.3 32-32 32s-32-14.3-32-32v-73.8c0-65.1 39.6-123.7 100.1-147.9c36.2-14.5 59.9-49.5 59.9-88.5V32c0-17.7 14.3-32 32-32M112 32a48 48 0 1 1 0 96a48 48 0 1 1 0-96"></path></svg>
       </div>
-      <div>
-        <div className="my-4">In the virgin birth of the Lord Jesus Christ and that He is the only Savior. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">In the virgin birth of the Lord Jesus Christ and that He is the only Savior. 
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(John 3:16,</HoverCardTrigger>
@@ -243,10 +246,10 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 48 48" fill="none"><rect x="12" y="20" width="24" height="8" stroke="currentColor" stroke-width="4" fill="none" rx="1" /><line x1="12" y1="28" x2="8" y2="40" stroke="currentColor" stroke-width="4"/><line x1="36" y1="28" x2="40" y2="40" stroke="currentColor" stroke-width="4"/><path d="M12 20 Q24 12 36 20" fill="currentColor" /></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 48 48" fill="none"><rect x="12" y="20" width="24" height="8" stroke="currentColor" strokeWidth="4" fill="none" rx="1" /><line x1="12" y1="28" x2="8" y2="40" stroke="currentColor" strokeWidth="4"/><line x1="36" y1="28" x2="40" y2="40" stroke="currentColor" strokeWidth="4"/><path d="M12 20 Q24 12 36 20" fill="currentColor" /></svg>
       </div>
-      <div>
-        <div className="my-4">That salvation is by grace through faith and not of works. Salvation is the gift of God and is eternally secure. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative y-4">That salvation is by grace through faith and not of works. Salvation is the gift of God and is eternally secure. 
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(Ephesians 2:8-9,</HoverCardTrigger>
@@ -298,10 +301,10 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="currentColor" d="M9.06 1.93C7.17 1.92 5.33 3.74 6.17 6H3a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h9V8h2v3h9a1 1 0 0 0 1-1V8a2 2 0 0 0-2-2h-3.17C19 2.73 14.6.42 12.57 3.24L12 4l-.57-.78c-.63-.89-1.5-1.28-2.37-1.29M9 4c.89 0 1.34 1.08.71 1.71S8 5.89 8 5a1 1 0 0 1 1-1m6 0c.89 0 1.34 1.08.71 1.71S14 5.89 14 5a1 1 0 0 1 1-1M2 12v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8h-9v8h-2v-8z"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 24 24"><path fill="currentColor" d="M9.06 1.93C7.17 1.92 5.33 3.74 6.17 6H3a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h9V8h2v3h9a1 1 0 0 0 1-1V8a2 2 0 0 0-2-2h-3.17C19 2.73 14.6.42 12.57 3.24L12 4l-.57-.78c-.63-.89-1.5-1.28-2.37-1.29M9 4c.89 0 1.34 1.08.71 1.71S8 5.89 8 5a1 1 0 0 1 1-1m6 0c.89 0 1.34 1.08.71 1.71S14 5.89 14 5a1 1 0 0 1 1-1M2 12v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8h-9v8h-2v-8z"></path></svg>
       </div>
-      <div>
-        <div className="my-4">That the Church is the body of Christ, which began on the day of Pentecost with Jesus Christ as the head. The Church is entrusted with the ministries of worship, edification, and evangelism. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">That the Church is the body of Christ, which began on the day of Pentecost with Jesus Christ as the head. The Church is entrusted with the ministries of worship, edification, and evangelism. 
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(Acts 2:14-47,</HoverCardTrigger>
@@ -336,10 +339,10 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 256 256"><path fill="currentColor" d="M228.12 145.14L192 123.47V104a8 8 0 0 0-4-7l-52-29.64V48h16a8 8 0 0 0 0-16h-16V16a8 8 0 0 0-16 0v16h-16a8 8 0 0 0 0 16h16v19.36L68 97.05a8 8 0 0 0-4 7v19.47l-36.12 21.62A8 8 0 0 0 24 152v64a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8v-48a16 16 0 0 1 32 0v48a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8v-64a8 8 0 0 0-3.88-6.86M64 208H40v-51.47l24-14.4Zm152 0h-24v-65.87l24 14.4Z"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 256 256"><path fill="currentColor" d="M228.12 145.14L192 123.47V104a8 8 0 0 0-4-7l-52-29.64V48h16a8 8 0 0 0 0-16h-16V16a8 8 0 0 0-16 0v16h-16a8 8 0 0 0 0 16h16v19.36L68 97.05a8 8 0 0 0-4 7v19.47l-36.12 21.62A8 8 0 0 0 24 152v64a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8v-48a16 16 0 0 1 32 0v48a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8v-64a8 8 0 0 0-3.88-6.86M64 208H40v-51.47l24-14.4Zm152 0h-24v-65.87l24 14.4Z"></path></svg>
       </div>
-      <div>
-        <div className="my-4">That baptism and the Lord’s Supper are the only ordinances of the Church instituted by Jesus Christ. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">That baptism and the Lord’s Supper are the only ordinances of the Church instituted by Jesus Christ. 
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(Matthew 28:19,</HoverCardTrigger>
@@ -374,11 +377,13 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><defs><mask id="ipSBread0"><g fill="none" stroke-linecap="round" stroke-width="4"><path fill="#fff" stroke="#fff" strokeLinejoin="round" d="M4 32.083c0-1.202.266-2.395.971-3.368C7.045 25.85 12.671 20 24 20s16.955 5.851 19.029 8.715c.705.973.971 2.166.971 3.368A7.917 7.917 0 0 1 36.083 40H11.917A7.917 7.917 0 0 1 4 32.083"/><path stroke="#000" d="M14 22v4"/><path stroke="#000" d="M34 22v4"/><path stroke="#000" d="M24 20v8"/><path stroke="#fff" d="M40 25.443C36.906 22.78 31.808 20 24 20s-12.906 2.779-16 5.443"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSBread0)"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="currentColor" d="M6.75 2.25c-.69 0-1.25.56-1.25 1.25v5.75A5.75 5.75 0 0 0 11.25 15v5.25H8.4a.75.75 0 0 0 0 1.5h7.2a.75.75 0 0 0 0-1.5h-2.85V15a5.75 5.75 0 0 0 5.75-5.75V3.5c0-.69-.56-1.25-1.25-1.25z"></path></svg>
+        <div className="absolute opacity-10 translate-x-24 flex justify-center -z-10">
+          <svg xmlns="http://www.w3.org/2000/svg" width={550} height={550} viewBox="0 0 48 48"><defs><mask id="ipSBread0"><g fill="none" strokeLinecap="round" strokeWidth="4"><path fill="#fff" stroke="#fff" strokeLinejoin="round" d="M4 32.083c0-1.202.266-2.395.971-3.368C7.045 25.85 12.671 20 24 20s16.955 5.851 19.029 8.715c.705.973.971 2.166.971 3.368A7.917 7.917 0 0 1 36.083 40H11.917A7.917 7.917 0 0 1 4 32.083"/><path stroke="#000" d="M14 22v4"/><path stroke="#000" d="M34 22v4"/><path stroke="#000" d="M24 20v8"/><path stroke="#fff" d="M40 25.443C36.906 22.78 31.808 20 24 20s-12.906 2.779-16 5.443"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSBread0)"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width={550} height={550} viewBox="12 0 10 24"><path fill="currentColor" d="M6.75 2.25c-.69 0-1.25.56-1.25 1.25v5.75A5.75 5.75 0 0 0 11.25 15v5.25H8.4a.75.75 0 0 0 0 1.5h7.2a.75.75 0 0 0 0-1.5h-2.85V15a5.75 5.75 0 0 0 5.75-5.75V3.5c0-.69-.56-1.25-1.25-1.25z"></path></svg>
+        </div>
       </div>
-      <div>
-        <div className="my-4">That the Holy Spirit indwells every believer upon belief in the Lord Jesus.
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">That the Holy Spirit indwells every believer upon belief in the Lord Jesus.
         <MediaQuery minWidth={600}>
           <HoverCard>
             <HoverCardTrigger>&nbsp;(Acts 2:1-4,</HoverCardTrigger>
@@ -413,14 +418,14 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-       <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 512 512"><path fill="currentColor" d="M160.8 96.5c14 17 31 30.9 49.5 42.2c25.9 15.8 53.7 25.9 77.7 31.6v-31.5c-22.2-30.3-38-67.3-39.4-110.8c-.4-11.3-7.5-21.5-18.4-24.4c-7.6-2-15.8-.2-21 5.8c-13.3 15.4-32.7 44.6-48.4 87.2zM320 144v64c-60.8-5.1-185-43.8-219.3-157.2C97.4 40 87.9 32 76.6 32c-7.9 0-15.3 3.9-18.8 11C46.8 65.9 32 112.1 32 176c0 116.9 80.1 180.5 118.4 202.8L11.8 416.6C6.7 418 2.6 421.8.9 426.8s-.8 10.6 2.3 14.8C21.7 466.2 77.3 512 160 512c3.6 0 7.2-1.2 10-3.5l75.6-60.5H320c88.4 0 160-71.6 160-160V128l29.9-44.9c1.3-2 2.1-4.4 2.1-6.8c0-6.8-5.5-12.3-12.3-12.3H400c-44.2 0-80 35.8-80 80m80-16a16 16 0 1 1 0 32a16 16 0 1 1 0-32"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 512 512"><path fill="currentColor" d="M160.8 96.5c14 17 31 30.9 49.5 42.2c25.9 15.8 53.7 25.9 77.7 31.6v-31.5c-22.2-30.3-38-67.3-39.4-110.8c-.4-11.3-7.5-21.5-18.4-24.4c-7.6-2-15.8-.2-21 5.8c-13.3 15.4-32.7 44.6-48.4 87.2zM320 144v64c-60.8-5.1-185-43.8-219.3-157.2C97.4 40 87.9 32 76.6 32c-7.9 0-15.3 3.9-18.8 11C46.8 65.9 32 112.1 32 176c0 116.9 80.1 180.5 118.4 202.8L11.8 416.6C6.7 418 2.6 421.8.9 426.8s-.8 10.6 2.3 14.8C21.7 466.2 77.3 512 160 512c3.6 0 7.2-1.2 10-3.5l75.6-60.5H320c88.4 0 160-71.6 160-160V128l29.9-44.9c1.3-2 2.1-4.4 2.1-6.8c0-6.8-5.5-12.3-12.3-12.3H400c-44.2 0-80 35.8-80 80m80-16a16 16 0 1 1 0 32a16 16 0 1 1 0-32"></path></svg>
       </div>
-      <div>
-        <div className="my-4">That the Lord Jesus Christ has commissioned His Church to proclaim the Gospel to all people and make disciples of all nations. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative my-4">That the Lord Jesus Christ has commissioned His Church to proclaim the Gospel to all people and make disciples of all nations. 
         <MediaQuery minWidth={600}>
           <HoverCard>
-            <HoverCardTrigger>&nbsp;(Matthew 28:18-20)</HoverCardTrigger>
-            <HoverCardContent>
+            <HoverCardTrigger className="z-50">&nbsp;(Matthew 28:18-20)</HoverCardTrigger>
+            <HoverCardContent className="z-50">
              &apos;And Jesus came and spoke to them, saying, “All authority has been given to Me in heaven and on earth. Go therefore and make disciples of all the nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all things that I have commanded you; and lo, I am with you always, even to the end of the age.” Amen.&apos; (NKJV)
             </HoverCardContent>
           </HoverCard>
@@ -434,63 +439,64 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="currentColor" d="m18.44 13.791l-5.499-9.585a2.1 2.1 0 0 0-1.274-.98a2.14 2.14 0 0 0-1.607.205l-1.196.696a.2.2 0 0 0-.078.06l-.069.087a.6.6 0 0 0-.147.275a25.4 25.4 0 0 1-1.588 3.783a6.1 6.1 0 0 1-1.754 1.892l-1.794 1.588a2.14 2.14 0 0 0-.686 1.244a2.3 2.3 0 0 0 .059.98c-.246.136-.46.324-.627.55a2.1 2.1 0 0 0-.363.744a2.2 2.2 0 0 0 0 .833a2.14 2.14 0 0 0 .806 1.397c.22.168.473.29.743.358q.264.071.539.068q.146.015.294 0c.272-.033.533-.127.764-.274c.216.243.489.428.794.54c.237.093.49.14.745.136q.209.005.412-.049l1.597 2.853a2.17 2.17 0 0 0 1.843 1.058a2.14 2.14 0 0 0 2.039-1.578a2.2 2.2 0 0 0-.206-1.607l-1.196-2.078q.484-.108.98-.118c1.395.059 2.782.236 4.146.53h.343l.157-.07l.147-.088l1.049-.607c.482-.279.835-.737.98-1.274a2.14 2.14 0 0 0-.353-1.569M6.551 16.948a.65.65 0 0 1-.431 0a.6.6 0 0 1-.324-.275l-1.49-2.607l-.097-.167a.66.66 0 0 1 .137-.823l1.107-.98l.412.725l2.127 3.725zm10.674-1.96a.7.7 0 0 1-.304.401l-.549.314l-6.136-10.694l.559-.323a.6.6 0 0 1 .48-.059a.63.63 0 0 1 .392.294l5.499 9.576a.66.66 0 0 1 .059.549zm-.255-5.823a.72.72 0 0 1-.637-.362a.735.735 0 0 1 .265-.98l2.45-1.422a.725.725 0 0 1 .98.265a.735.735 0 0 1-.265.98l-2.45 1.421a.7.7 0 0 1-.343.098m4.518 3.47h-2.832a.735.735 0 1 1 0-1.47h2.832a.735.735 0 0 1 0 1.47m-6.831-6.969a.7.7 0 0 1-.363-.098a.726.726 0 0 1-.274-.98l1.411-2.47a.736.736 0 0 1 1.274.735l-1.411 2.46a.73.73 0 0 1-.637.353"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 24 24"><path fill="currentColor" d="m18.44 13.791l-5.499-9.585a2.1 2.1 0 0 0-1.274-.98a2.14 2.14 0 0 0-1.607.205l-1.196.696a.2.2 0 0 0-.078.06l-.069.087a.6.6 0 0 0-.147.275a25.4 25.4 0 0 1-1.588 3.783a6.1 6.1 0 0 1-1.754 1.892l-1.794 1.588a2.14 2.14 0 0 0-.686 1.244a2.3 2.3 0 0 0 .059.98c-.246.136-.46.324-.627.55a2.1 2.1 0 0 0-.363.744a2.2 2.2 0 0 0 0 .833a2.14 2.14 0 0 0 .806 1.397c.22.168.473.29.743.358q.264.071.539.068q.146.015.294 0c.272-.033.533-.127.764-.274c.216.243.489.428.794.54c.237.093.49.14.745.136q.209.005.412-.049l1.597 2.853a2.17 2.17 0 0 0 1.843 1.058a2.14 2.14 0 0 0 2.039-1.578a2.2 2.2 0 0 0-.206-1.607l-1.196-2.078q.484-.108.98-.118c1.395.059 2.782.236 4.146.53h.343l.157-.07l.147-.088l1.049-.607c.482-.279.835-.737.98-1.274a2.14 2.14 0 0 0-.353-1.569M6.551 16.948a.65.65 0 0 1-.431 0a.6.6 0 0 1-.324-.275l-1.49-2.607l-.097-.167a.66.66 0 0 1 .137-.823l1.107-.98l.412.725l2.127 3.725zm10.674-1.96a.7.7 0 0 1-.304.401l-.549.314l-6.136-10.694l.559-.323a.6.6 0 0 1 .48-.059a.63.63 0 0 1 .392.294l5.499 9.576a.66.66 0 0 1 .059.549zm-.255-5.823a.72.72 0 0 1-.637-.362a.735.735 0 0 1 .265-.98l2.45-1.422a.725.725 0 0 1 .98.265a.735.735 0 0 1-.265.98l-2.45 1.421a.7.7 0 0 1-.343.098m4.518 3.47h-2.832a.735.735 0 1 1 0-1.47h2.832a.735.735 0 0 1 0 1.47m-6.831-6.969a.7.7 0 0 1-.363-.098a.726.726 0 0 1-.274-.98l1.411-2.47a.736.736 0 0 1 1.274.735l-1.411 2.46a.73.73 0 0 1-.637.353"></path></svg>
       </div>
-      <div>
-        <div>That the Church will be raptured, followed by the Great Tribulation and Christ’s return to the earth to establish His Millennial Kingdom. 
+      <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[50vh]">
+        <div className="relative z-10">That the Church will be raptured, followed by the Great Tribulation and Christ’s return to the earth to establish His Millennial Kingdom. 
 
-        <MediaQuery minWidth={600}>
-            <HoverCard>
-              <HoverCardTrigger>&nbsp;(Matthew 24:15-30,</HoverCardTrigger>
-              <HoverCardContent>
-                Due to the length of the passage, please read this passage on your own.  
-              </HoverCardContent>
-            </HoverCard>
-          </MediaQuery>
-          <MediaQuery maxWidth={600}>
-            <Popover>
-              <PopoverTrigger>&nbsp;(Matthew 24:15-30,</PopoverTrigger>
-              <PopoverContent>
-                Due to the length of the passage, please read this passage on your own.
-              </PopoverContent>
-            </Popover>
-          </MediaQuery>
+<MediaQuery minWidth={600}>
+    <HoverCard>
+      <HoverCardTrigger>&nbsp;(Matthew 24:15-30,</HoverCardTrigger>
+      <HoverCardContent>
+        Due to the length of the passage, please read this passage on your own.  
+      </HoverCardContent>
+    </HoverCard>
+  </MediaQuery>
+  <MediaQuery maxWidth={600}>
+    <Popover>
+      <PopoverTrigger>&nbsp;(Matthew 24:15-30,</PopoverTrigger>
+      <PopoverContent>
+        Due to the length of the passage, please read this passage on your own.
+      </PopoverContent>
+    </Popover>
+  </MediaQuery>
 
-          <MediaQuery minWidth={600}>
-            <HoverCard>
-              <HoverCardTrigger>&nbsp;1 Thessalonians 4:16-17,</HoverCardTrigger>
-              <HoverCardContent>
-                &apos;For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first. 17 Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.&apos; (NKJV)
-              </HoverCardContent>
-            </HoverCard>
-          </MediaQuery>
-          <MediaQuery maxWidth={600}>
-            <Popover>
-              <PopoverTrigger>&nbsp;1 Thessalonians 4:16-17,</PopoverTrigger>
-              <PopoverContent>
-                &apos;For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first. 17 Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.&apos; (NKJV)
-              </PopoverContent>
-            </Popover>
-          </MediaQuery>
+  <MediaQuery minWidth={600}>
+    <HoverCard>
+      <HoverCardTrigger>&nbsp;1 Thessalonians 4:16-17,</HoverCardTrigger>
+      <HoverCardContent>
+        &apos;For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first. 17 Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.&apos; (NKJV)
+      </HoverCardContent>
+    </HoverCard>
+  </MediaQuery>
+  <MediaQuery maxWidth={600}>
+    <Popover>
+      <PopoverTrigger>&nbsp;1 Thessalonians 4:16-17,</PopoverTrigger>
+      <PopoverContent>
+        &apos;For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first. 17 Then we who are alive and remain shall be caught up together with them in the clouds to meet the Lord in the air. And thus we shall always be with the Lord.&apos; (NKJV)
+      </PopoverContent>
+    </Popover>
+  </MediaQuery>
 
-          <MediaQuery minWidth={600}>
-            <HoverCard>
-              <HoverCardTrigger>&nbsp;Revelation 20:4-6)</HoverCardTrigger>
-              <HoverCardContent>
-               &apos;And I saw thrones, and they sat on them, and judgment was committed to them. Then I saw the souls of those who had been beheaded for their witness to Jesus and for the word of God, who had not worshiped the beast or his image, and had not received his mark on their foreheads or on their hands. And they lived and reigned with Christ for a thousand years. But the rest of the dead did not live again until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over such the second death has no power, but they shall be priests of God and of Christ, and shall reign with Him a thousand years.&apos; (NKJV)
-              </HoverCardContent>
-            </HoverCard>
-          </MediaQuery>
-          <MediaQuery maxWidth={600}>
-            <Popover>
-              <PopoverTrigger>&nbsp;Revelation 20:4-6)</PopoverTrigger>
-              <PopoverContent>
-                &apos;And I saw thrones, and they sat on them, and judgment was committed to them. Then I saw the souls of those who had been beheaded for their  witness to Jesus and for the word of God, who had not worshiped the beast or his image, and had not received his mark on their foreheads or on their hands. And they lived and reigned with Christ for a thousand years. But the rest of the dead did not live again until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over such the second death has no power, but they shall be priests of God and of Christ, and shall reign with Him a thousand years.&apos; (NKJV)
-              </PopoverContent>
-            </Popover>
-          </MediaQuery>
+  <MediaQuery minWidth={600}>
+    <HoverCard>
+      <HoverCardTrigger>&nbsp;Revelation 20:4-6)</HoverCardTrigger>
+      <HoverCardContent>
+       &apos;And I saw thrones, and they sat on them, and judgment was committed to them. Then I saw the souls of those who had been beheaded for their witness to Jesus and for the word of God, who had not worshiped the beast or his image, and had not received his mark on their foreheads or on their hands. And they lived and reigned with Christ for a thousand years. But the rest of the dead did not live again until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over such the second death has no power, but they shall be priests of God and of Christ, and shall reign with Him a thousand years.&apos; (NKJV)
+      </HoverCardContent>
+    </HoverCard>
+  </MediaQuery>
+  <MediaQuery maxWidth={600}>
+    <Popover>
+      <PopoverTrigger>&nbsp;Revelation 20:4-6)</PopoverTrigger>
+      <PopoverContent>
+        &apos;And I saw thrones, and they sat on them, and judgment was committed to them. Then I saw the souls of those who had been beheaded for their  witness to Jesus and for the word of God, who had not worshiped the beast or his image, and had not received his mark on their foreheads or on their hands. And they lived and reigned with Christ for a thousand years. But the rest of the dead did not live again until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over such the second death has no power, but they shall be priests of God and of Christ, and shall reign with Him a thousand years.&apos; (NKJV)
+      </PopoverContent>
+    </Popover>
+  </MediaQuery>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 16 16"><path fill="currentColor" d="M8.999 6a3.5 3.5 0 0 0-3.464 3H5.5a2.5 2.5 0 0 0 0 5h7a2.5 2.5 0 0 0 0-5h-.037A3.5 3.5 0 0 0 9 6m-.212-3.18a.5.5 0 1 0-.883-.47l-.426.803a.5.5 0 0 0 .883.47zm-3.772-.747a.5.5 0 1 0-.957.293l.267.87a.5.5 0 0 0 .956-.293zM3 7c0 .604.179 1.166.486 1.637c.367-.259.787-.45 1.24-.551a4.51 4.51 0 0 1 3.56-3.03A3 3 0 0 0 3 7M1.82 4.214a.5.5 0 1 0-.47.883l.803.426a.5.5 0 0 0 .47-.883zm.416 4.463a.5.5 0 0 0-.293-.956l-.87.266a.5.5 0 1 0 .293.956z"></path></svg>
+        <svg className="absolute opacity-10 translate-x-36 -z-10" style={{ zIndex: 1 }} xmlns="http://www.w3.org/2000/svg" width={1000} height={1000} viewBox="0 0 16 16"><path fill="currentColor" d="M8.999 6a3.5 3.5 0 0 0-3.464 3H5.5a2.5 2.5 0 0 0 0 5h7a2.5 2.5 0 0 0 0-5h-.037A3.5 3.5 0 0 0 9 6m-.212-3.18a.5.5 0 1 0-.883-.47l-.426.803a.5.5 0 0 0 .883.47zm-3.772-.747a.5.5 0 1 0-.957.293l.267.87a.5.5 0 0 0 .956-.293zM3 7c0 .604.179 1.166.486 1.637c.367-.259.787-.45 1.24-.551a4.51 4.51 0 0 1 3.56-3.03A3 3 0 0 0 3 7M1.82 4.214a.5.5 0 1 0-.47.883l.803.426a.5.5 0 0 0 .47-.883zm.416 4.463a.5.5 0 0 0-.293-.956l-.87.266a.5.5 0 1 0 .293.956z"></path></svg>
+        
       </div>
     </div>
     </div>
