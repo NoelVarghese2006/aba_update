@@ -18,7 +18,7 @@ function Header() {
   }
 
   return (
-    <div className="flex justify-between p-4 bg-amber-50 min-w-screen w-auto">
+    <div className="top-0 flex justify-between p-4 bg-amber-50 min-w-screen w-auto">
         <div className="text-2xl">Agape Brethren Assembly</div>
         <div className="md:hidden pt-1">
           <div onClick={openSheet}>
