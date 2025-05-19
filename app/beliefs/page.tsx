@@ -246,7 +246,7 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <FadeInSVG className="absolute opacity-10 translate-x-36 -z-10"  width={1000} height={1000} viewBox="0 0 48 48" fill="none"><rect x="12" y="20" width="24" height="8" stroke="currentColor" strokeWidth="4" fill="none" rx="1" /><line x1="12" y1="28" x2="8" y2="40" stroke="currentColor" strokeWidth="4"/><line x1="36" y1="28" x2="40" y2="40" stroke="currentColor" strokeWidth="4"/><path d="M12 20 Q24 12 36 20" fill="currentColor" /></FadeInSVG>
+        <FadeInSVG className="absolute opacity-10 translate-x-36 -z-10"  width={1000} height={1000} viewBox="0 0 48 48"><rect x="12" y="20" width="24" height="8" stroke="currentColor" strokeWidth="4" fill="none" rx="1" /><line x1="12" y1="28" x2="8" y2="40" stroke="currentColor" strokeWidth="4"/><line x1="36" y1="28" x2="40" y2="40" stroke="currentColor" strokeWidth="4"/><path d="M12 20 Q24 12 36 20" fill="currentColor" /></FadeInSVG>
       </div>
       <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[100vh]">
         <div className="relative y-4">That salvation is by grace through faith and not of works. Salvation is the gift of God and is eternally secure. 
@@ -377,10 +377,7 @@ function Beliefs() {
           </Popover>
         </MediaQuery>
         </div>
-        <div className="absolute opacity-10 translate-x-24 flex justify-center -z-10">
-          <FadeInSVG  width={550} height={550} viewBox="0 0 48 48"><defs><mask id="ipSBread0"><g fill="none" strokeLinecap="round" strokeWidth="4"><path fill="#fff" stroke="#fff" strokeLinejoin="round" d="M4 32.083c0-1.202.266-2.395.971-3.368C7.045 25.85 12.671 20 24 20s16.955 5.851 19.029 8.715c.705.973.971 2.166.971 3.368A7.917 7.917 0 0 1 36.083 40H11.917A7.917 7.917 0 0 1 4 32.083"/><path stroke="#000" d="M14 22v4"/><path stroke="#000" d="M34 22v4"/><path stroke="#000" d="M24 20v8"/><path stroke="#fff" d="M40 25.443C36.906 22.78 31.808 20 24 20s-12.906 2.779-16 5.443"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSBread0)"/></FadeInSVG>
-          <FadeInSVG  width={550} height={550} viewBox="12 0 10 24"><path fill="currentColor" d="M6.75 2.25c-.69 0-1.25.56-1.25 1.25v5.75A5.75 5.75 0 0 0 11.25 15v5.25H8.4a.75.75 0 0 0 0 1.5h7.2a.75.75 0 0 0 0-1.5h-2.85V15a5.75 5.75 0 0 0 5.75-5.75V3.5c0-.69-.56-1.25-1.25-1.25z"></path></FadeInSVG>
-        </div>
+        <FadeInSVG className="absolute opacity-10 translate-x-24 flex justify-center -z-10"  viewBox="0 0 32 40" width={1000} height={1000}><g data-name="Layer 9"><path d="M25,18H17a5,5,0,0,0-5,5v1a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V23A5,5,0,0,0,25,18Zm3,6H14V23a3,3,0,0,1,2-2.82V21a1,1,0,0,0,2,0V20h2v1a1,1,0,0,0,2,0V20h2v1a1,1,0,0,0,2,0v-.82A3,3,0,0,1,28,23Z"/><path d="M12,13V7a1,1,0,0,0-1-1H3A1,1,0,0,0,2,7v6a5,5,0,0,0,4,4.9V24H5a1,1,0,0,0,0,2H9a1,1,0,0,0,0-2H8V17.9A5,5,0,0,0,12,13ZM4,13V8h6v5a3,3,0,0,1-6,0Z"/></g><text x="0" y="47" fill="#000000" fontSize="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Ahmad Roaayala</text><text x="0" y="52" fill="#000000" fontSize="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></FadeInSVG>
       </div>
       <div className="relative snap-center flex justify-center items-center min-h-screen min-w-screen my-[100vh]">
         <div className="relative my-4">That the Holy Spirit indwells every believer upon belief in the Lord Jesus.
