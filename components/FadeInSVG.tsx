@@ -22,13 +22,14 @@ const FadeInSVG: React.FC<FadeInSVGProps> = ({
   return (
     <motion.svg
       ref={ref}
+      style={{translateX: 200}}
       initial={{ y: 20, opacity: 0 }}
-      animate={isInView ? { y: 0, opacity: .1 } : { y: 20, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}
       width={width}
       height={height}
       viewBox={viewBox}
-      className={className}
+      className={`text-amber-100 ${className}`}
       xmlns="http://www.w3.org/2000/svg"
     >
       {children}
