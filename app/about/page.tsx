@@ -6,7 +6,7 @@ const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
 function About() {
   return (
-    <div className="flex flex-col items-center text-left p-4">
+    <div className="flex flex-col items-center text-left p-4 overflow-y-scroll h-[calc(100vh-74px)]">
         <div className={bs.className}><div className="text-2xl my-4">About Us</div></div>
         <div>Agape Brethren Assembly was formed in the year 2011 by the Lord, through a few like-minded brethren, to worship and serve Him in the North Dallas region.</div>
         <div className="my-4">As an assembly, our focus is on becoming more and more Christ-like in our conduct, reaching the unreached with His glorious Gospel, and abounding in Faith, Hope, and Love.</div>

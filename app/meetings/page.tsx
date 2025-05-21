@@ -21,7 +21,7 @@ const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
 
 
-function Meetings() 
+function Meetings(e: React.MouseEvent) 
 {
     const [date, setDate] = React.useState<Date | undefined>(new Date())
     const [cardData, setCardData] = useState("");
@@ -48,7 +48,7 @@ function Meetings()
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 0.5, delay: 0.5}}
-                className="w-[275px] md:w-96">  
+                className="w-full">  
                 <Card className="bg-amber-200">
                     <CardHeader>
                         <CardTitle className="flex justify-center">Sunday</CardTitle>
