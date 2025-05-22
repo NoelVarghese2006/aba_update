@@ -27,7 +27,7 @@ function Beliefs() {
     <div className="top-4 flex flex-col overflow-y-auto overflow-x-hidden snap-y snap-mandatory max-h-[calc(100vh-74px)]">
     
     <div className={bs.className}><h1 className="snap-start flex justify-center items-center text-2xl h-[calc(100vh-74px)]">We Believe: </h1></div>
-    <div className="mt-20 p-20 text-3xl">
+    <div className="mt-20 p-[10vw] text-3xl">
       <div className="relative snap-start flex justify-center items-center min-h-screen min-w-screen -scroll-mb-20">
         <div className="realtive">That the Bible is the inspired Word of God and is the final authority for all matters of faith, life, and conduct.  
         <MediaQuery minWidth={600}>

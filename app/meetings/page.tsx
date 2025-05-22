@@ -31,7 +31,7 @@ function Meetings(e: React.MouseEvent)
       };
 
     return(
-        <div className="flex flex-col justify-center w-full border-red-800">
+        <div className="flex flex-col justify-center w-full border-red-800 overflow-y-scroll">
         <div className={bs.className}><h1 className="flex justify-center text-2xl">Meeting Schedule</h1></div>
         <div className="h-full w-full md:grid grid-cols-2 px-[10vw]">
             <Calendar 

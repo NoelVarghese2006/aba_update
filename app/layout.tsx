@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="overflow-y-hidden">
+      <body className="md:overflow-y-hidden">
         <Header />
         <div className="flex flex-row min-h-screen">
           <Sidebar />
