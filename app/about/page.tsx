@@ -9,7 +9,9 @@ function About() {
     <div className="flex flex-col items-center text-left p-4 overflow-y-scroll h-[calc(100vh-74px)]">
         <div className={bs.className}><div className="text-2xl my-4">About Us</div></div>
         <div>Agape Brethren Assembly was formed in the year 2011 by the Lord, through a few like-minded brethren, to worship and serve Him in the North Dallas region.</div>
+        <Image src="/table.png" alt='Table' width={1000} height={1000} />
         <div className="my-4">As an assembly, our focus is on becoming more and more Christ-like in our conduct, reaching the unreached with His glorious Gospel, and abounding in Faith, Hope, and Love.</div>
+        <Image src="/testify.png" alt='Boards' width={1000} height={1000} />
         <div>In all our gatherings, we follow the apostolic simplicity as outlined in His Word and strive to exalt Christ in whatever we do.</div>
         <Image src="/romans.png" alt='Romans ' width={1000} height={1000} />
         <div className="text-2xl my-4">What&apos;s Agape?</div>
