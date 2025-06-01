@@ -20,7 +20,7 @@ function Sidebar() {
 
   return (
     <>
-    <div className="hidden md:block flex-auto bg-amber-100 h-full min-h-screen p-4">
+    <div className="hidden md:block flex-auto bg-orange-200 dark:bg-cyan-700 h-full min-h-screen p-4">
             <div className="text-lg font-semibold flex justify-center">Other Pages</div>
             <div className="flex flex-col items-center justify-center w-[11vw] gap-4 my-6">
                     <PageLink text='Home' link='/' img='House'/>
