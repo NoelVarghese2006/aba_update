@@ -29,7 +29,7 @@ const FadeInSVG: React.FC<FadeInSVGProps> = ({
       width={window.innerWidth > 768 ? width : window.innerWidth + 50}
       height={height}
       viewBox={viewBox}
-      className={`text-amber-100 ${className}`}
+      className={`text-orange-100 dark:text-cyan-900 ${className}`}
       xmlns="http://www.w3.org/2000/svg"
     >
       {children}

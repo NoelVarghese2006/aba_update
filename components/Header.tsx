@@ -6,7 +6,7 @@ import {
   } from "@/components/ui/sheet"
 import { Menu, Moon, Sun } from "lucide-react"
 import PageLink from "./PageLink"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "./ui/button"
 import { useTheme } from "next-themes"
 
@@ -20,6 +20,14 @@ function Header() {
   }
 
   const {theme, setTheme} = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Avoid SSR mismatch
 
   return (
     <div className="top-0 flex justify-between p-4 bg-[#F4A261] dark:bg-cyan-900 min-w-screen w-auto">

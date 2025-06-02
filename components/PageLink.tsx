@@ -27,6 +27,7 @@ function PageLink({text, link, img}: PageLink) {
     const [color, setColor] = useState("#000"); // Track color
     const [tempX, setTempX] = useState(0);
     const [currX, setCurrX] = useState(offset);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
         if (theme === "dark") {
@@ -35,6 +36,14 @@ function PageLink({text, link, img}: PageLink) {
         setColor("#000");
         }
     }, [theme]);
+
+
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // Avoid SSR mismatch
 
     const startHover = (e: React.MouseEvent) => {
         if(window.innerWidth < 768) {
@@ -76,7 +85,7 @@ function PageLink({text, link, img}: PageLink) {
   return (
     <Link 
     href={link}
-    className="flex flex-row items-start gap-1 hover:text-orange-700 dark:hover:text-cyan-800" 
+    className="flex flex-row items-start gap-1 hover:text-orange-700 dark:hover:text-cyan-300" 
     onMouseOver={startHover} 
     onMouseLeave={endHover}>
         <motion.div
