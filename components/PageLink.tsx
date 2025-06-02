@@ -30,11 +30,12 @@ function PageLink({text, link, img}: PageLink) {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        if (theme === "dark") {
-        setColor("#fff");
-        } else {
-        setColor("#000");
-        }
+        if(typeof theme != "undefined")
+            if (theme === "dark") {
+            setColor("#fff");
+            } else {
+            setColor("#000");
+            }
     }, [theme]);
 
 
