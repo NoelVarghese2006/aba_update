@@ -1,22 +1,19 @@
-import Image from 'next/image'
+"use client"
 
 import { Berkshire_Swash } from 'next/font/google'
+import BlurClick from '@/components/BlurClick'
   
 const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
 function About() {
+  
+
   return (
     <div className="top-4 overflow-x-hidden snap-y snap-mandatory max-h-[calc(100vh-74px)] flex flex-col items-center text-left overflow-y-scroll h-[calc(100vh-74px)]">
         <div className={bs.className}><div className="snap-start flex justify-center items-center text-2xl h-[calc(100vh-74px)]">About Us</div></div>
-        <div className='relative snap-start flex flex-row justify-center items-center min-h-screen min-w-screen -scroll-mb-20 bg-cover bg-center bg-no-repeat' style={{backgroundImage: "url('/table.png')"}}>
-          <div className='w-full h-full flex items-center text-center text-white text-3xl blur-sm hover:backdrop-blur-sm hover:blur-none rounded-lg transition duration-700 will-change-contents'>Agape Brethren Assembly was formed in the year 2011 by the Lord, through a few like-minded brethren, to worship and serve Him in the North Dallas region.</div>
-        </div>
-        <div className='relative snap-start flex flex-row justify-center items-center min-h-screen min-w-screen -scroll-mb-20 bg-cover bg-center bg-no-repeat' style={{backgroundImage: "url('/testify.png')"}}>
-          <div className='w-full h-full flex items-center text-center text-white text-3xl blur-sm hover:backdrop-blur-sm hover:blur-none rounded-lg transition duration-500 will-change-contents my-4'>As an assembly, our focus is on becoming more and more Christ-like in our conduct, reaching the unreached with His glorious Gospel, and abounding in Faith, Hope, and Love.</div>
-        </div>
-        <div className='relative snap-start flex flex-row justify-center items-center min-h-screen min-w-screen -scroll-mb-20 bg-cover bg-center bg-no-repeat' style={{backgroundImage: "url('/romans.png')"}}>
-          <div className='w-full h-full flex items-center text-center text-white text-3xl blur-sm hover:backdrop-blur-sm hover:blur-none rounded-lg transition duration-500 will-change-contents my-4'>In all our gatherings, we follow the apostolic simplicity as outlined in His Word and strive to exalt Christ in whatever we do.</div>
-        </div>
+        <BlurClick img="url('/table.png')" txt="Agape Brethren Assembly was formed in the year 2011 by the Lord, through a few like-minded brethren, to worship and serve Him in the North Dallas region." />
+        <BlurClick img="url('/testify.png')" txt="As an assembly, our focus is on becoming more and more Christ-like in our conduct, reaching the unreached with His glorious Gospel, and abounding in Faith, Hope, and Love." />
+        <BlurClick img="url('/romans.png')" txt="In all our gatherings, we follow the apostolic simplicity as outlined in His Word and strive to exalt Christ in whatever we do." />
         <div className='snap-start min-h-screen min-w-screen -scroll-mb-20'>
           <div className="text-2xl my-4">What&apos;s Agape?</div>
           <div>&quot;AGAPE&quot; is Greek for unconditional love, the greatest form of love seen in the Bible. God manifested this love towards mankind by sending His only begotten Son Jesus Christ to die for man&apos;s sins on the cross of calvary, so that &quot;...whosoever believes in Him will not perish but have everlasting life&quot;. (John 3:16)</div>
