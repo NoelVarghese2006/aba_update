@@ -98,7 +98,7 @@ const Calendar: React.FC<CalendarProps> = ({
           }
         }}
         modifiersClassNames={{
-          sundays: "bg-amber-200",
+          sundays: "bg-amber-300",
           wednesdays: "bg-orange-400",
           saturdays: "text-white bg-indigo-950",
           fSaturdays: "text-white bg-indigo-800"

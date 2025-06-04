@@ -38,10 +38,10 @@ function Contact() {
 
     return (
       <div className="flex flex-col w-screen">
-      <div className={bs.className}><h1 className="flex flex-row h-fit justify-center text-2xl">Contact</h1></div>
+      <div className={bs.className}><h1 className="flex flex-row h-fit justify-center text-4xl p-10">Contact</h1></div>
       <div className="flex flex-col md:flex-row justify-evenly w-full items-center">
         <div className="flex flex-col justify-evenly w-fit m-4">
-          <Card className="bg-amber-200 w-full mb-4">
+          <Card className="bg-orange-200 dark:bg-cyan-700 w-full mb-4">
               <CardHeader>
                   <CardTitle className="flex justify-center">Address</CardTitle>
               </CardHeader>
@@ -50,7 +50,7 @@ function Contact() {
                 <div>Dallas, TX 75252</div>
               </CardContent>
           </Card>
-          <Card className="bg-amber-200 w-full mb-4">
+          <Card className="bg-orange-200 dark:bg-cyan-700 w-full mb-4">
               <CardHeader>
                   <CardTitle className="flex justify-center">Phone</CardTitle>
               </CardHeader>
@@ -59,7 +59,7 @@ function Contact() {
                 <div>972-839-3566</div>
               </CardContent>
           </Card>
-          <Card className="bg-amber-200 w-full">
+          <Card className="bg-orange-200 dark:bg-cyan-700 w-full">
               <CardHeader>
                   <CardTitle className="flex justify-center">Email</CardTitle>
               </CardHeader>
@@ -68,7 +68,7 @@ function Contact() {
               </CardContent>
           </Card>
         </div>
-        <div className="flex flex-col justify-evenly min-w-fit w-[50vw]">       
+        <div className="hidden md:flex flex-col justify-evenly min-w-fit w-[50vw]">       
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField

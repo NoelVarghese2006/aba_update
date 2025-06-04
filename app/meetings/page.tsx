@@ -50,8 +50,8 @@ function Meetings(e: React.MouseEvent)
     }, [cardData])
 
     return(
-        <div className="flex flex-col w-full border-red-800 overflow-y-scroll m-0">
-        <div className={bs.className}><h1 className="flex justify-center text-2xl">Meeting Schedule</h1></div>
+        <div className="flex flex-col w-full border-red-800 m-0 h-screen">
+        <div className={bs.className}><h1 className="flex justify-center text-4xl p-10">Meeting Schedule</h1></div>
 
         <Calendar 
                 mode="single"
@@ -62,17 +62,17 @@ function Meetings(e: React.MouseEvent)
         /> 
         {openWhich == 1 && 
         <Dialog open={open} onOpenChange={handleClose}>
-            <DialogContent className="flex flex-col justify-center items-center text-center bg-amber-200 text-black">
+            <DialogContent className="flex flex-col justify-center items-center text-center bg-amber-300 text-black">
                 <DialogHeader className={bs.className}>
                         <DialogTitle className="flex justify-center">Sunday</DialogTitle>
                 </DialogHeader>
-                <div>10:00am - 11:00am</div>
+                <div className="font-bold">10:00am - 11:00am</div>
                 <div>Breaking of Bread</div>
-                <div>11:00am - 12:00pm</div>
+                <div className="font-bold">11:00am - 12:00pm</div>
                 <div>Word Ministry</div>
-                <div>12:00pm - 12:45pm</div>
+                <div className="font-bold">12:00pm - 12:45pm</div>
                 <div>Fellowship & Snacks</div>
-                <div>12:45pm - 1:30pm</div>
+                <div className="font-bold">12:45pm - 1:30pm</div>
                 <div>Sunday School & Bible Study</div>
             </DialogContent>
         </Dialog>
@@ -83,7 +83,7 @@ function Meetings(e: React.MouseEvent)
                 <DialogHeader className={bs.className}>
                         <DialogTitle className="flex justify-center">Wednesday</DialogTitle>
                 </DialogHeader>
-                <div>7:00pm - 8:00pm</div>
+                <div className="font-bold">7:00pm - 8:00pm</div>
                 <div>Prayer Meeting</div>
             </DialogContent>
         </Dialog>
@@ -94,7 +94,7 @@ function Meetings(e: React.MouseEvent)
                 <DialogHeader className={bs.className}>
                         <DialogTitle className="flex justify-center">Saturday</DialogTitle>
                 </DialogHeader>
-                <div>7:00pm - 8:00pm</div>
+                <div className="font-bold">7:00pm - 8:00pm</div>
                 <div>Bible Study</div>
             </DialogContent>
         </Dialog>
@@ -105,7 +105,7 @@ function Meetings(e: React.MouseEvent)
                 <DialogHeader className={bs.className}>
                         <DialogTitle className="flex justify-center">First Saturday</DialogTitle>
                 </DialogHeader>
-                <div>7:00pm - 8:00pm</div>
+                <div className="font-bold">7:00pm - 8:00pm</div>
                 <div>Letter Writing</div>
             </DialogContent>
         </Dialog>

@@ -59,7 +59,10 @@ function PageLink({text, link, img}: PageLink) {
         else
             setRotate((e.clientX-currX));
         offset = offset * (window.innerWidth / 1528) + 20 * 1528 / window.innerWidth - 20;
-        setTempX(-offset + e.clientX)
+        if(e.clientX > 100) 
+            setTempX(0)
+        else
+            setTempX(-offset + e.clientX)
         setMoveX(-offset + e.clientX);
         setTimeout(() => {
             setColor(theme === 'light' ? "#ffd6a8" : "#0e7490"); 
@@ -99,7 +102,7 @@ function PageLink({text, link, img}: PageLink) {
         <motion.div
         animate={{ rotate, x: moveX}} // Bind rotation to state
         transition={{ duration: 0.3 }}
-        className="bg-orange-200 dark:bg-cyan-700"
+        className="bg-transparent"
         >
             {img === "House" ? <House /> : img === "Church" ? <Church /> : img === "Users" ? <Users /> : img === "FileBadge" ? <FileBadge /> : img === "Mail" ? <Mail /> : null}
         </motion.div>

@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light" style={{ colorScheme: 'light' }}>
-      <body className="md:overflow-y-hidden">
+    <html lang="en" className="light scrollbar-none" style={{ colorScheme: 'light' }}>
+      <body className="md:overflow-y-hidden scrollbar-none">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
           <div className="flex flex-row min-h-screen dark:bg-slate-950">
