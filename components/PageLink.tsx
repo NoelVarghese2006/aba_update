@@ -30,7 +30,7 @@ function PageLink({text, link, img}: PageLink) {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        if(typeof theme != "undefined")
+        if(typeof theme != "undefined" && typeof window != "undefined")
             if (theme === "dark") {
             setColor("#fff");
             } else {
@@ -58,6 +58,7 @@ function PageLink({text, link, img}: PageLink) {
             setRotate((e.clientX-currX) * 10);
         else
             setRotate((e.clientX-currX));
+        offset = offset * (window.innerWidth / 1528) + 20 * 1528 / window.innerWidth - 20;
         setTempX(-offset + e.clientX)
         setMoveX(-offset + e.clientX);
         setTimeout(() => {
@@ -93,6 +94,7 @@ function PageLink({text, link, img}: PageLink) {
         animate={{color: color}}
         >
             {text}
+
         </motion.div>
         <motion.div
         animate={{ rotate, x: moveX}} // Bind rotation to state

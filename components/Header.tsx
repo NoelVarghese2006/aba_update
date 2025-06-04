@@ -31,7 +31,8 @@ function Header() {
 
   return (
     <div className="top-0 flex justify-between p-4 bg-[#F4A261] dark:bg-cyan-900 min-w-screen w-auto">
-        <div className="text-2xl">Agape Brethren Assembly</div>
+        <div className="text-2xl hidden sm:block">Agape Brethren Assembly</div>
+        <div className="text-2xl sm:hidden">ABA</div>
         <div className="flex flex-row space-x-1">
           {theme === 'dark' ? <Button onClick={() => setTheme("light")}><Sun/></Button> : <Button onClick={() => setTheme("dark")}><Moon/></Button>}
           <div className="md:hidden flex justify-start items-center">

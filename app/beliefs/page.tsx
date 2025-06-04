@@ -71,8 +71,8 @@ function Beliefs() {
       </div>
       <div className="relative snap-start flex justify-center items-center min-h-screen min-w-screen my-[100vh] -scroll-mb-20">
         <div className="relative my-4 z-10">That the Church is the body of Christ, which began on the day of Pentecost with Jesus Christ as the head. The Church is entrusted with the ministries of worship, edification, and evangelism. 
-          <VerseCard reference="&nbsp;Ephesians 2:20-23)" verse="Due to the length of the passage, please read it on your own." />
-          <VerseCard reference="&nbsp;(Acts 2:14-47," verse="&apos;having been built on the foundation of the apostles and prophets, Jesus Christ Himself being the chief cornerstone, in whom the whole building, being fitted together, grows into a holy temple in the Lord, in whom you also are being built together for a dwelling place of God in the Spirit.&apos; (NKJV)" />
+          <VerseCard reference="&nbsp;(Acts 2:14-47," verse="Due to the length of the passage, please read it on your own" />
+          <VerseCard reference="&nbsp;Ephesians 2:20-23)" verse="&apos;having been built on the foundation of the apostles and prophets, Jesus Christ Himself being the chief cornerstone, in whom the whole building, being fitted together, grows into a holy temple in the Lord, in whom you also are being built together for a dwelling place of God in the Spirit.&apos; (NKJV)" />
         </div>
         <FadeInSVG className="absolute opacity-10 translate-x-36 "  width={700} height={700} viewBox="0 0 256 256"><path fill="currentColor" d="M228.12 145.14L192 123.47V104a8 8 0 0 0-4-7l-52-29.64V48h16a8 8 0 0 0 0-16h-16V16a8 8 0 0 0-16 0v16h-16a8 8 0 0 0 0 16h16v19.36L68 97.05a8 8 0 0 0-4 7v19.47l-36.12 21.62A8 8 0 0 0 24 152v64a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8v-48a16 16 0 0 1 32 0v48a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8v-64a8 8 0 0 0-3.88-6.86M64 208H40v-51.47l24-14.4Zm152 0h-24v-65.87l24 14.4Z"></path></FadeInSVG>
       </div>
