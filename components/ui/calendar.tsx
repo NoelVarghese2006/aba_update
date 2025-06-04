@@ -76,7 +76,7 @@ const Calendar: React.FC<CalendarProps> = ({
   return (
       <DayPicker
         modifiers={{sundays, wednesdays, saturdays, fSaturdays}}
-        onDayPointerEnter={(date, modifiers) => {
+        onDayClick={(date, modifiers) => {
           if (modifiers.sundays) {
             setCurrDay('Sunday');
             handleClick('Sunday');
@@ -101,7 +101,7 @@ const Calendar: React.FC<CalendarProps> = ({
           sundays: "bg-amber-200",
           wednesdays: "bg-orange-400",
           saturdays: "text-white bg-indigo-950",
-          fSaturdays: "text-white bg-indigo-900"
+          fSaturdays: "text-white bg-indigo-800"
         }}
         showOutsideDays={showOutsideDays}
         className={cn("p-3", className)}
