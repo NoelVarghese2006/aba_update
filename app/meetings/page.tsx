@@ -14,7 +14,7 @@ const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
 
 
-function Meetings(e: React.MouseEvent) 
+function Meetings() 
 {
     const [date, setDate] = React.useState<Date | undefined>(new Date());
     const [cardData, setCardData] = useState("");

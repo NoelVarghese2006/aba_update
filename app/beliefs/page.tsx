@@ -1,20 +1,6 @@
 "use client"
 
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card"
-
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-
 import FadeInSVG from "@/components/FadeInSVG"
-
-import MediaQuery from "react-responsive"
 
 import { Berkshire_Swash } from 'next/font/google'
 import VerseCard from "@/components/VerseCard"

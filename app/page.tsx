@@ -1,10 +1,9 @@
 "use client"
 
 import { Berkshire_Swash } from 'next/font/google'
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import {  useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
