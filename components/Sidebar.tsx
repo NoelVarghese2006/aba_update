@@ -7,8 +7,6 @@ import { useState } from "react"
 
 
 function Sidebar() {
-    const [sheetOpen, setSheetOpen] = useState(false);
-
   return (
     <>
     <div className="hidden md:flex flex-col bg-orange-200 dark:bg-cyan-700 h-full min-h-screen w-auto p-4 justify-start">
