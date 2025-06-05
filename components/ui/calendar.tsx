@@ -41,15 +41,6 @@ const Calendar: React.FC<CalendarProps> = ({
   };
 
   // Generate an array of the next N occurrences of a specific day
-  const generateWeekDays = (numOfDays: number, targetDay: number): Date[] => {
-    const weekDaysArray: Date[] = [];
-    const currentDay = getNextDay(new Date(), targetDay); // Start with the first occurrence of the target day
-    for (let i = 0; i < numOfDays; i++) {
-      weekDaysArray.push(new Date(currentDay)); // Add current day to the array
-      currentDay.setDate(currentDay.getDate() + 7); // Move to the next occurrence (7 days later)
-    }
-    return weekDaysArray;
-  };
 
   function splitSaturdays(sats: Date[]){
     for (const sat of sats) {
@@ -64,6 +55,17 @@ const Calendar: React.FC<CalendarProps> = ({
   };
 
   React.useEffect(() => {
+    const generateWeekDays = (numOfDays: number, targetDay: number): Date[] => {
+      const weekDaysArray: Date[] = [];
+      const currentDay = getNextDay(new Date(), targetDay); // Start with the first occurrence of the target day
+      for (let i = 0; i < numOfDays; i++) {
+        weekDaysArray.push(new Date(currentDay)); // Add current day to the array
+        currentDay.setDate(currentDay.getDate() + 7); // Move to the next occurrence (7 days later)
+      }
+      return weekDaysArray;
+    };
+
+
     // Example: Generate the next 5 Sundays (0 = Sunday, 6 = Saturday)
     const upcomingSundays = generateWeekDays(5, 0);  // 0 for Sunday
     const upcomingSaturdays = generateWeekDays(5, 6);
@@ -71,7 +73,7 @@ const Calendar: React.FC<CalendarProps> = ({
     splitSaturdays(upcomingSaturdays);
     setSundays(upcomingSundays);
     setWed(upcomingWednesdays);
-  }, [generateWeekDays]);
+  }, []);
 
   return (
       <DayPicker
