@@ -1,10 +1,6 @@
 "use client"
 
 import PageLink from "./PageLink"
-import { useState } from "react"
-
-
-
 
 function Sidebar() {
   return (
