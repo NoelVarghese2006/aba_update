@@ -12,8 +12,9 @@ export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: '-100px' });  
 
+  //to-[#b5c9e5]
   return (
-    <div className={`h-[calc(100vh-74px)] overflow-y-scroll relative snap-start flex flex-col justify-center items-center min-w-screen -scroll-mb-20 bg-cover bg-center bg-no-repeat snap-y snap-mandatory bg-gradient-to-r from-white to-[#b5c9e5]`}>
+    <div className={`h-[calc(100vh-74px)] overflow-y-scroll relative snap-start flex flex-col justify-center items-center min-w-screen -scroll-mb-20 bg-cover bg-center bg-no-repeat snap-y snap-mandatory bg-gradient-to-r from-blue-50 to-[#b5c9e5]`}>
       <div className={`flex flex-col justify-center min-h-screen items-center snap-end mt-[200vh] mb-[100vh] -scroll-mt-52 text-black ${bs.className}`}>
         <div className="flex justify-center text-8xl text-center">Agape Brethren Assembly</div>
         <div className="flex justify-center text-5xl text-center">Unconditional Love</div>
@@ -23,7 +24,7 @@ export default function Home() {
       initial={{ opacity: 0, y: 40 }} // start 40px lower
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} // move up and fade in
       transition={{ duration: isInView ? 2 : 0, ease: 'easeOut'}}
-      className="flex flex-col justify-center min-h-screen items-center snap-start bg-center bg-cover bg-no-repeat px-4 text-white will-change-contents"
+      className="flex flex-col justify-start sm:justify-center min-h-screen items-center snap-start bg-center bg-cover bg-no-repeat px-4 text-white will-change-contents"
       style={{ backgroundImage: "url('/church.png')" }}
       >
       <div className='flex flex-col justify-center min-h-screen min-w-screen items-center snap-start'>
