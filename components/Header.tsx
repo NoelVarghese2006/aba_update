@@ -38,9 +38,9 @@ function Header() {
         <div className="flex flex-row space-x-1">
           {theme === 'dark' ? <Button onClick={() => setTheme("light")}><Sun/></Button> : <Button onClick={() => setTheme("dark")}><Moon/></Button>}
           <div className="md:hidden flex justify-start items-center">
-            <Button onClick={openSheet}><Menu className="hover:text-red-800"/></Button>
+            <Button onClick={openSheet}><Menu className="hover:text-orange-700 dark:hover:text-cyan-300"/></Button>
             <Sheet open={sheetOpen}>
-            <SheetContent side={'right'} className="w-52 bg-orange-200 dark:bg-cyan-700 min-h-screen">
+            <SheetContent side={'right'} className="w-52 bg-orange-200 dark:bg-cyan-700 min-h-screen dark:text-white">
                 <SheetTitle className="flex items-center justify-center">Other Pages</SheetTitle>
                 <div className="flex flex-col items-center justify-center w-full gap-4 my-6" onClick={openSheet}>
                         <PageLink text='Home' link='/' img='House'/>
