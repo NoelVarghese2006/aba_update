@@ -24,7 +24,7 @@ export default function Home() {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} // move up and fade in
       transition={{ duration: isInView ? 2 : 0, ease: 'easeOut'}}
       className="flex flex-col justify-start sm:justify-center min-h-screen items-center snap-start bg-center bg-cover bg-no-repeat px-4 text-white will-change-contents"
-      style={{ backgroundImage: "url('/church.png')" }}
+      style={{ backgroundImage: "url('/church-fs8.png')" }}
       >
       <div className='flex flex-col justify-center min-h-screen min-w-screen items-center snap-start'>
         <div className="flex justify-end items-center overflow-x-hidden w-screen md:w-[83vw]">
