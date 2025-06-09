@@ -6,35 +6,39 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
-import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
+import emailjs from '@emailjs/browser'
 
 import { Berkshire_Swash } from 'next/font/google'
+import React from "react"
   
+
 const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
 
-const formSchema = z.object({
-  name: z.string().min(2).max(50),
-  email: z.string().email(),
-  message: z.string()
-})
+type FormValues = {
+  user_name: string;
+  user_email: string;
+  message: string;
+};
 
 
 function Contact() {
-    const form = useForm<z.infer<typeof formSchema>>({
-      resolver: zodResolver(formSchema),
-      defaultValues: {
-        name: "",
-        email: "",
-        message: ""
-      },
-    })
- 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-      console.log(values)
-    }
+  const form = useForm<FormValues>();
 
+  const onSubmit = (data: FormValues) => {
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, 
+    {
+      user_name: data.user_name,
+      user_email: data.user_email,
+      message: data.message
+    }, {
+      publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY!,
+    }).then(
+      () => console.log('SUCCESS!'),
+    ).catch((error) => {
+      console.error("FAILED with catch:", error); 
+    });
+  };
 
     return (
       <div className="flex flex-col w-screen">
@@ -69,34 +73,34 @@ function Contact() {
           </Card>
         </div>
         <div className="hidden md:flex flex-col justify-evenly min-w-fit w-[50vw]">       
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+           <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-md mx-auto">
               <FormField
                 control={form.control}
-                name="name"
+                name="user_name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Name" {...field} />
+                      <Input placeholder="Your name" {...field} />
                     </FormControl>
-                    <FormMessage />
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
-                name="email"
+                name="user_email"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="email" {...field} />
+                      <Input type="email" placeholder="you@example.com" {...field} />
                     </FormControl>
-                    <FormMessage />
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="message"
@@ -104,15 +108,15 @@ function Contact() {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Enter your message." {...field}/>
+                      <Textarea placeholder="Your message" {...field} />
                     </FormControl>
-                    <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+
+              <Button type="submit" className="w-full">Send</Button>
             </form>
-          </Form>  
+          </Form>
         </div> 
       </div>
       </div>
