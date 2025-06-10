@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
 
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser'
@@ -23,9 +24,16 @@ type FormValues = {
 
 
 function Contact() {
-  const form = useForm<FormValues>();
+  const form = useForm({
+    defaultValues: {
+      user_name: '',
+      user_email: '',
+      message: ''
+    }
+  });
 
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
+    form.reset();
     emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, 
     {
       user_name: data.user_name,
@@ -33,10 +41,19 @@ function Contact() {
       message: data.message
     }, {
       publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY!,
-    }).then(
-      () => console.log('SUCCESS!'),
+    }).then(() => {
+      toast.success("Success", {
+        description: "Your message has been sent successfully!",
+        closeButton: true,
+      })
+    },
     ).catch((error) => {
       console.error("FAILED with catch:", error); 
+      toast.error("Error", {
+        description: error.text || "An error occurred while sending your message.",
+        closeButton: true,
+      }
+      );
     });
   };
 

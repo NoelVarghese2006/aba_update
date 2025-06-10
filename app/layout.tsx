@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/sonner"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en" className="light scrollbar-none" style={{ colorScheme: 'light' }}>
       <body className="md:overflow-y-hidden scrollbar-none">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Toaster richColors/>
           <Header />
           <div className="flex flex-row min-h-screen dark:bg-slate-950">
             <Sidebar />
