@@ -11,9 +11,9 @@ function About() {
   return (
     <div className="top-4 overflow-x-hidden snap-y snap-mandatory max-h-[calc(100vh-74px)] flex flex-col items-center text-left overflow-y-scroll h-[calc(100vh-74px)]">
         <div className={bs.className}><div className="snap-start flex justify-center items-center text-4xl h-[calc(100vh-74px)]">About Us</div></div>
-        <BlurClick img="url('/table-fs8.png')" txt="Agape Brethren Assembly was formed in the year 2011 by the Lord, through a few like-minded brethren, to worship and serve Him in the North Dallas region." />
-        <BlurClick img="url('/testify-fs8.png')" txt="As an assembly, our focus is on becoming more and more Christ-like in our conduct, reaching the unreached with His glorious Gospel, and abounding in Faith, Hope, and Love." />
-        <BlurClick img="url('/romans-fs8.png')" txt="In all our gatherings, we follow the apostolic simplicity as outlined in His Word and strive to exalt Christ in whatever we do." />
+        <BlurClick img="/table-fs8.png" txt="Agape Brethren Assembly was formed in the year 2011 by the Lord, through a few like-minded brethren, to worship and serve Him in the North Dallas region." />
+        <BlurClick img="/testify-fs8.png" txt="As an assembly, our focus is on becoming more and more Christ-like in our conduct, reaching the unreached with His glorious Gospel, and abounding in Faith, Hope, and Love." />
+        <BlurClick img="/romans-fs8.png" txt="In all our gatherings, we follow the apostolic simplicity as outlined in His Word and strive to exalt Christ in whatever we do." />
         <div className='snap-start min-h-screen min-w-screen -scroll-mb-20 flex flex-col justify-start items-center px-10 xs:text-xl text-2xl'>
           <div className={`text-4xl p-10 text-center ${bs.className}`}>What&apos;s Agape?</div>
           <div className='p-4 bg-orange-200 dark:bg-cyan-700 rounded-lg'>

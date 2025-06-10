@@ -90,7 +90,7 @@ function PageLink({text, link, img}: PageLink) {
   return (
     <Link 
     href={link}
-    className="flex flex-row items-start gap-1 hover:text-orange-700 dark:hover:text-cyan-300" 
+    className="flex flex-row items-start gap-1 dark:text-white hover:text-orange-700 dark:hover:text-cyan-300" 
     onMouseOver={startHover} 
     onMouseLeave={endHover}>
         <motion.div
