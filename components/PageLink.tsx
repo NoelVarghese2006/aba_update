@@ -14,7 +14,7 @@ interface PageLink {
 
 
 function PageLink({text, link, img}: PageLink) {
-    let offset = 126;
+    /*let offset = 126;
     if(text === "Meetings")
         offset = 135;
     if(text === "Contact")
@@ -85,27 +85,19 @@ function PageLink({text, link, img}: PageLink) {
         setTimeout(() => {
             setRotate(0);
         }, 200);   
-    };
+    };*/
 
   return (
     <Link 
     href={link}
     className="flex flex-row items-start gap-1 dark:text-white hover:text-orange-700 dark:hover:text-cyan-300" 
-    onMouseOver={startHover} 
-    onMouseLeave={endHover}>
-        <motion.div
-        animate={{color: color}}
-        >
+    >
+        <div>
             {text}
-
-        </motion.div>
-        <motion.div
-        animate={{ rotate, x: moveX}} // Bind rotation to state
-        transition={{ duration: 0.3 }}
-        className="bg-transparent"
-        >
+        </div>
+        <div className="bg-transparent">
             {img === "House" ? <House /> : img === "Church" ? <Church /> : img === "Users" ? <Users /> : img === "FileBadge" ? <FileBadge /> : img === "Mail" ? <Mail /> : null}
-        </motion.div>
+        </div>
 
     </Link>
   )
