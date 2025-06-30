@@ -34,7 +34,7 @@ const FadeInSVG: React.FC<FadeInSVGProps> = ({
   return (
     <motion.svg
       ref={ref}
-      style={{translateX: windowWidth > 768 ? 200 : 0}}
+      style={{translateX: windowWidth > 768 ? 575 : 0}}
       initial={{ y: 20, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}

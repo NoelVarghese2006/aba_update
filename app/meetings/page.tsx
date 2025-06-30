@@ -11,10 +11,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
   
 const bs = Berkshire_Swash({ subsets: ['latin'], weight: ['400'] })
   
-
-
-
-
 function Meetings() 
 {
     const [date, setDate] = React.useState<Date | undefined>(new Date());
